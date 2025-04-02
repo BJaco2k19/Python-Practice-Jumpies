@@ -16,7 +16,7 @@
 # As you navigate this lab, keep the following tips in mind:
 # 
 # - `### YOUR CODE HERE ###` indicates where you should write code. Be sure to replace this with your own code before running the code cell.
-# - Feel free to open the hints for additional guidance as you work on each task. 
+# - Feel free to open the hints for additional guidance as you work on each task. (These have been removed for display here on GitHub) 
 # - To enter your answer to a question, double-click the markdown cell to edit. Be sure to replace the "[Double-click to enter your responses here.]" with your own answer.
 # - You can save your work manually by clicking File and then Save in the menu bar at the top of the notebook. 
 # - You can download your work locally by clicking File and then Download and then specifying your preferred file format in the menu bar at the top of the notebook. 
@@ -55,12 +55,6 @@ print(import_file)
 print(remove_list)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# To display the contents of a variable, pass it as an argument to the `print()` function.
-# 
-# </details>
 
 # #### **Question 1**
 # **What do you observe about the output above?**
@@ -89,16 +83,7 @@ remove_list = ["192.168.97.225", "192.168.158.170", "192.168.201.40", "192.168.5
 with open(import_file, "r") as file:
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# The `open()` function in Python allows you to open a file. 
-# 
-# As the first parameter, it takes in the name of the file (or a variable containing the name of the file). As the second parameter, it takes in a string that indicates how the file should be handled.
-# 
-# Pass in the letter `"r"` as the second parameter when you want to read the file.
-# 
-# </details>
+
 
 # ## Task 3
 # Now, use the `.read()` method to read the imported file and store it in a variable named `ip_addresses`. 
@@ -131,32 +116,14 @@ with open(import_file, "r") as file:
 print(ip_addresses)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# The `.read()` method in Python allows you to read in a file.
-# 
-# </details>
 
-# <details>
-#   <summary><h4><strong>Hint 2</strong></h4></summary>
-# 
-# Call `file.read()` to read the imported file.
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 3</strong></h4></summary>
-# 
-# To display the contents of a variable, pass it as an argument to the `print()` function.
-# 
-# </details>
 
 # #### **Question 2**
 # **Do you notice any IP addresses in the allow list that are also in the `remove_list`?**
 # 
 
-# [Double-click to enter your responses here.]
+# After running everything, there are four IP addresses in the allow list that are also in the remove_list.
+
 
 # ## Task 4
 # After reading the file, reassign the `ip_addresses` variable so its data type is updated from a string to a list. Use the `.split()` method to achieve this. Adding this step will allow you to iterate through each of the IP addresses in the allow list instead of navigating a large string that contains all the addresses merged together. 
@@ -193,21 +160,7 @@ ip_addresses = ip_addresses.split
 print(ip_addresses)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# The `.split()` method in Python allows you to convert a string to a list. This method can take in a parameter that specifies which character to split on. If a parameter is not passed in, the method will split on whitespace by default. Note that whitespace includes any space between text on the same line and the space between one line and the next line.
-# 
-# In this task, the default behavior of `.split()` works well. Each IP address is on a new line in the `allow_list.txt` file. In other words, there is whitespace between IP addresses in the text file. When you use `.split()`, it will separate the IP addresses and output them as a list.
-# 
-# </details>
 
-# <details>
-#   <summary><h4><strong>Hint 2</strong></h4></summary>
-# 
-# To display the contents of a variable, pass it as an argument to the `print()` function.
-# 
-# </details>
 
 # ## Task 5
 # Now, you'll write code that removes the elements of `remove_list` from the `ip_addresses` list. This will require both an iterative statement and a conditional statement. 
@@ -249,19 +202,6 @@ for element in ip_addresses:
     print(element)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# Build a `for` loop to iterate through `ip_addresses`. Be sure to start with the `for` keyword. Use `element` as the loop variable and use `in` as the loop condition.
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 2</strong></h4></summary>
-# 
-# To display the contents of a variable, pass it as an argument to the `print()` function.
-# 
-# </details>
 
 # ## Task 6
 # Now, build a conditional statement to remove the elements of `remove_list` from the `ip_addresses` list. The conditional statement should be placed inside the iterative statement that loops through `ip_addresses`. In every iteration, if the current element in the `ip_addresses` list is in the `remove_list`, the `remove()` method should be used to remove that element. 
@@ -313,24 +253,7 @@ for element in ip_addresses:
 print(ip_addresses)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# When building the conditional statement, use the `in` operator to check if `element` is in `remove_list`. 
-# 
-# </details>
-<details>
-  <summary><h4><strong>Hint 2</strong></h4></summary>
 
-To remove `element` from `ip_addresses`, call the `.remove()` method on `ip_addresses`, and pass in `element`.
-
-</details>
-# <details>
-#   <summary><h4><strong>Hint 3</strong></h4></summary>
-# 
-# To remove `element` from `ip_addresses`, call `ip_addresses.remove()` and pass in `element`.
-# 
-# </details>
 
 # ## Task 7
 # The next step is to update the original file that was used to create the `ip_addresses` list. A line of code containing the `.join()` method has been added to the code so that the file can be updated. This is necessary because `ip_addresses` must be in string format when used inside the `with` statement to rewrite the file.
@@ -390,28 +313,7 @@ with open(import_file, "w") as file:
   file.write(ip_addresses)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# To complete the first line of the `with` statement, call the `open()` function and pass in the name of the file as the first parameter and the letter `"w"` as the second parameter. 
-# 
-# The `"w"` parameter specifies that you're opening the file for the purpose of writing to it. 
-# 
-# </details>
 
-# <details>
-#   <summary><h4><strong>Hint 2</strong></h4></summary>
-# 
-# Inside the `with` statement, call the `.write()` method to replace the contents of the file with the data stored in `ip_addresses`.
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 3</strong></h4></summary>
-# 
-# Inside the `with` statement, call `file.write()` and pass in `ip_addresses`.
-# 
-# </details>
 
 # ## Task 8
 # In this task, you'll verify that the original file was rewritten using the correct list. 
@@ -485,45 +387,12 @@ with open(import_file, "r") as file:
 print(text)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# To complete the first line of the `with` statement, call the `open()` function and pass in the name of the file as the first parameter and the letter `"r"` as the second parameter. 
-# 
-# The `"r"` parameter specifies that you're opening the file for the purpose of reading it. 
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 2</strong></h4></summary>
-# 
-# Inside the `with` statement, call the `.read()` method to read the contents of the file. Assign the `text` variable to the result. 
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 3</strong></h4></summary>
-# 
-# To display the contents of a variable, pass it as an argument to the `print()` function.
-# 
-# </details>
-
-# ## Task 9
-# The next step is to bring all of the code you've written leading up to this point and put it all into one function. 
-# 
-# Define a function named `update_file()` that takes in two parameters. The first parameter is the name of the text file that contains IP addresses (call this parameter `import_file`). The second parameter is a list that contains IP addresses to be removed (call this parameter `remove_list`).
-# 
-# Be sure to replace the `### YOUR CODE HERE ###` with your own code before you run the following cell. Note that this code cell will not produce an output.
-# 
-# 
-
-# In[ ]:
 
 
 # Define a function named `update_file` that takes in two parameters: `import_file` and `remove_list`
 # and combines the steps you've written in this lab leading up to this
 
-def ### YOUR CODE HERE ###
+def update_file(import_file, remove_list):
 
     # Build `with` statement to read in the initial contents of the file
 
@@ -554,7 +423,7 @@ def ### YOUR CODE HERE ###
 
     # Convert `ip_addresses` back to a string so that it can be written into the text file 
 
-    ip_addresses = " ".join(ip_addresses)       
+    ip_addresses = " ".join(ip_addresses)
 
     # Build `with` statement to rewrite the original file
 
@@ -565,31 +434,12 @@ def ### YOUR CODE HERE ###
         file.write(ip_addresses)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# Use the `def` keyword to start the function definition. 
-# 
-# </details>
 
-# <details>
-#   <summary><h4><strong>Hint 2</strong></h4></summary>
-# 
-# After the `def` keyword, specify the name of the function, followed by parantheses and a colon. Inside the parantheses, specify the parameters that the function takes in.
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 3</strong></h4></summary>
-# 
-# After the `def` keyword, write `update_file(import_file, remove_list):` to complete the function definition header.
-# 
-# </details>
 
 # #### **Question 3**
 # **What are the benefits of incorporating the algorithm into a single function?**
 
-# [Double-click to enter your responses here.]
+# Incorporating the algorithm into a single function helps organize the code and make it reusable. If you want to execute the algorithm more than once, all you have to do is call the function that contains it.
 
 # ## Task 10
 # Finally, call the `update_file()` that you defined. Apply the function to `"allow_list.txt"` and pass in a list of IP addresses as the second argument.
@@ -666,29 +516,23 @@ with open("allow_list.txt", "r") as file:
 print(text)
 
 
-# <details>
-#   <summary><h4><strong>Hint 1</strong></h4></summary>
-# 
-# To call the `update_file()` function, write the name of the function, followed by parantheses, and pass in the file name and list of IP addresses that you want to try out the function on. Be sure to separate the two arguments with a comma (`,`). 
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 2</strong></h4></summary>
-# 
-# Inside the `with` statement, call the `.read()` method to read the contents of the file. Assign the `text` variable to the result. 
-# 
-# </details>
-
-# <details>
-#   <summary><h4><strong>Hint 3</strong></h4></summary>
-# 
-# To display the contents of the `text` variable, pass it as an argument to the `print()` function.
-# 
-# </details>
 
 # ## Conclusion
 # 
 # **What are your key takeaways from this lab?**
 
-# [Double-click to enter your responses here.]
+# 
+#    Python has functions and syntax that help you import and parse text files.
+#        The with statement allows you to efficiently handle files.
+#        The open() function allows you to import or open a file. It takes in the name of the file as the first parameter and a string that indicates the purpose of opening the file as the second parameter.
+#            Specify "r" as the second parameter if you're opening the file for reading purposes.
+#            Specify "w" as the second parameter if you're opening the file for writing purposes.
+#        The .read() method allows you to read in a file.
+#        The .write() method allows you to append or write to a file.
+#    You can use a for loop to iterate over a list.
+#    You can use an if statement to check if a given value is in a list and execute a specific action if so.
+#    You can use the .split() method to convert a string to a list.
+#    You can use Python to compare contents of a text file against elements of a list.
+#    Algorithms can be incorporated into functions. When defining a function, you must specify the parameters it takes in and the actions it should execute.
+
+
