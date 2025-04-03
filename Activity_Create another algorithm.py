@@ -1,3 +1,6 @@
+#This was an lab activity as part of the Google Cybersecurity Professional Certification, practicing the creation of Algorithms in Python to help automate tasks.
+#This was initially done in a Jupyter Notebook, so Instructions and Text Replys are included, but the hints that are normally found have been removed. (4/3)
+
 #!/usr/bin/env python
 # coding: utf-8
 
