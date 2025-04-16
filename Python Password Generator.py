@@ -1,10 +1,12 @@
 #Practicing coding in Python, using a PythonGeeks Password Generator.  3/6/25.
 #As reference, as of now (3/8), the code works after learning I was mixing up random.sample vs random.choices, as well as not using string variables correctly.
 
+#First, import libaries random and messagebox to be able to create random strings and to create an interface box for the generator.
 import random
 from tkinter import messagebox
 from tkinter import *
 
+#Now, the generator itself.  
 def generate_password():
     try:
         repeat = int(repeat_entry.get())
